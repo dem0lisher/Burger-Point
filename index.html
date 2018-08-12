@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Burger Point</title>
+	<link rel="icon" href="./build/img/logo.png">
+	<link rel="stylesheet" type="text/css" href="./build/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="./build/css/index.css">
+</head>
+<body>
+	<header id="header">
+		<div id="logo-container">
+			<!-- Logo for Desktop -->
+			<a href="javascript:void(0)" title="Home" class="desktop-view"><img src="./build/img/logo.png" alt="Logo" id="burger-icon"></a>
+			<!-- Menu icon for Mobile -->
+			<div id="menu-btn" class="mobile-view"><i class="fas fa-bars"></i></div>
+		</div>
+		<div id="header-menu">
+			<!-- Logo for Mobile -->
+			<div id="mobile-logo-container" class="mobile-view">
+				<a href="javascript:void(0)" title="Home"><img src="./build/img/logo.png" alt="Logo" id="mobile-burger-icon"></a>
+			</div>
+			<div id="top-menu-container">
+				<ul>
+					<li class="top-menu-item"><a href="javascript:void(0)" title="Burger">Burger</a></li>
+					<li class="top-menu-item"><a href="javascript:void(0)" title="Sausage">Sausage</a></li>
+					<li class="top-menu-item"><a href="javascript:void(0)" title="Kebab">Kebab</a></li>
+					<li class="top-menu-item"><a href="javascript:void(0)" title="Shawarma">Shawarma</a></li>
+					<li class="top-menu-item last-item"><a href="javascript:void(0)" title="Cabbage">Cabbage</a></li>
+				</ul>
+			</div>
+			<div id="bottom-menu-container">
+				<ul>
+					<li class="bottom-menu-item"><a href="javascript:void(0)" title="Beef">Beef</a></li>
+					<li class="bottom-menu-item"><a href="javascript:void(0)" title="Mutton">Mutton</a></li>
+					<li class="bottom-menu-item"><a href="javascript:void(0)" title="Rabbit">Rabbit</a></li>
+					<li class="bottom-menu-item"><a href="javascript:void(0)" title="Chicken">Chicken</a></li>
+					<li class="bottom-menu-item"><a href="javascript:void(0)" title="Egg">Egg</a></li>
+					<li class="bottom-menu-item last-item" id="ask-us-btn"><a href="javascript:void(0)" title="Ask Us">Ask Us</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="login-container">
+			<div>
+				<span class="desktop-view">Log-in</span><i class="fas fa-user"></i>
+			</div>
+		</div>
+	</header>
+	<section id="body-container">
+		<img class="lazy" data-src="./build/img/banner-1.png" alt="Banner Image" width="100%">
+		<img class="lazy" data-src="./build/img/banner-2.png" alt="Banner Image" width="100%">
+		<img class="lazy" data-src="./build/img/banner-3.png" alt="Banner Image" width="100%">
+		<video class="lazy-video" data-src="./build/img/test-video.mp4" autobuffer autoloop loop controls width="100%">
+		</video>
+		<div id="overlay">
+		</div>
+	</section>
+	<footer>
+		<div id="footer-links-container">
+			<div>
+				<ul>
+					<li class="social-btn"><a href="javascript:void(0)" title="Facebook Page"><i class="fab fa-facebook-f"></i></a></li>
+					<li class="social-btn"><a href="javascript:void(0)" title="Twitter Page"><i class="fab fa-twitter"></i></a></li>
+					<li class="social-btn last-item"><a href="javascript:void(0)" title="Google Plus Page"><i class="fab fa-google-plus-g"></i></a></li>
+				</ul>
+			</div>
+			<div id="footer-links">
+				<ul>
+					<li class="footer-link"><a href="javascript:void(0)" title="Burger">Burger</a></li>
+					<li class="footer-link"><a href="javascript:void(0)" title="Burger">Burger</a></li>
+					<li class="footer-link"><a href="javascript:void(0)" title="Burger">Burger</a></li>
+					<li class="footer-link last-item"><a href="javascript:void(0)" title="Burger">Burger</a></li>
+				</ul>
+			</div>
+		</div>
+		<span>Test for Front-end ninja. Centre for Content Creation.</span>
+	</footer>
+	<script src="./build/js/lazyload.min.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="./build/js/index.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>

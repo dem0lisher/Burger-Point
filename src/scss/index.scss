@@ -1,0 +1,246 @@
+// Variables
+$white: #ffffff;
+$black: rgba(0,0,0,0.87);
+$header-text: #060606;
+
+// Generic CSS
+%flex-row{
+	display: flex;
+	flex-direction: row;
+}
+%flex-column{
+	display: flex;
+	flex-direction: column;
+}
+%flex-center{
+	align-items: center;
+	justify-content: center;
+}
+%flex-space-between{
+	align-items: center;
+	justify-content: space-between;
+}
+%flex-valign{
+	align-items: center;
+}
+*{
+	box-sizing: border-box;
+	outline-style: none;
+	font-family: sans-serif;
+}
+a{
+	color: $black;
+	text-decoration: none;
+	&:hover{
+		text-decoration: none;
+	}
+}
+ul{
+	@extend %flex-row;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.last-item{
+	margin: 0 !important;
+}
+.mobile-view{
+	display: none;
+}
+.desktop-view{
+	display: inline;
+}
+#overlay{
+	display: none;
+}
+
+// Specific from top to bottom
+body{
+	margin: 0;
+}
+#header{
+	@extend %flex-row;
+	@extend %flex-space-between;
+	color: $header-text;
+	height: 100px;
+	width: 100%;
+}
+#logo-container{
+	height: 100%;
+	padding: 20px;
+}
+#burger-icon{
+	height: 50px;
+	width: 50px;
+}
+#header-menu{
+	height: 100%;
+}
+#top-menu-container{
+	border-bottom: 1px solid #e6e6e6;
+	padding: 0 30px;
+	ul{
+		margin: 20px 0 10px 0;
+	}
+}
+.top-menu-item{
+	margin-right: 30px;
+	a{
+		color: $header-text;
+		font-size: 18px;
+	}
+}
+#bottom-menu-container{
+	@extend %flex-row;
+	@extend %flex-center;
+	ul{
+		margin: 10px 0;
+		@extend %flex-row;
+		@extend %flex-valign;
+	}
+}
+.bottom-menu-item{
+	@extend %flex-row;
+	margin-right: 20px;
+	a{
+		color: $header-text;
+		font-size: 10px;
+		text-transform: uppercase;
+	}
+}
+#ask-us-btn{
+	@extend %flex-center;
+	@extend %flex-row;
+	background-color: $header-text;
+	border-radius: 8px;
+	padding: 5px 17px;
+	a{
+		color: $white !important;
+	}
+}
+#login-container{
+	@extend %flex-row;
+	align-items: flex-start;
+	color: $header-text;
+	height: 100%;
+	justify-content: center;
+	padding: 20px;
+	div{
+		@extend %flex-center;
+		@extend %flex-row;
+		span{
+			margin-right: 10px;
+			font-size: 14px;
+		}
+		i{
+			font-size: 22px;
+		}
+	}
+}
+#body-container{
+	@extend %flex-column;
+}
+footer{
+	@extend %flex-center;
+	@extend %flex-column;
+	background-color: #F6F6F6;
+	height: 250px;
+	span{
+		color: #8c8c8c;
+		font-size: 12px;
+		margin-top: 20px;
+	}
+}
+#footer-links-container{
+	@extend %flex-center;
+	@extend %flex-column;
+	border-bottom: 1px solid #cccccc;
+	padding: 0 60px;
+}
+.social-btn{
+	@extend %flex-center;
+	@extend %flex-row;
+	background-color: #4d4d4d;
+	border-radius: 100%;
+	font-size: 22px;
+	height: 40px;
+	margin-right: 20px;
+	width: 40px;
+	a{
+		color: $white;
+	}
+}
+#footer-links{
+	ul{
+		margin: 20px 0;
+	}
+}
+.footer-link{
+	margin-right: 20px;
+	a{
+		font-size: 14px;
+		color: #4d4d4d;
+	}
+}
+
+@media screen and (max-width: 780px) {
+	.desktop-view{
+		display: none;
+	}
+	.mobile-view{
+		display: inline;
+	}
+	#overlay{
+		z-index: 5;
+		height: 100%;
+		width: 100%;
+		background-color: #000;
+		opacity: 0.6;
+		position: fixed;
+		top: 0;
+	}
+	#header{
+		height: 60px;
+	}
+	#menu-btn{
+		font-size: 22px;
+		cursor: pointer;
+	}
+	#header-menu{
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		overflow-x: hidden;
+		transition: 0.3s;
+		padding: 25px 0 0 0;
+		background-color: $white;
+	}
+	#mobile-logo-container{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#mobile-burger-icon{
+		height: 45px;
+		width: 45px;
+	}
+	#bottom-menu-container{
+		justify-content: flex-start;
+		padding: 0 30px;
+	}
+	#top-menu-container ul, #bottom-menu-container ul{
+		flex-direction: column;
+	}
+	#bottom-menu-container ul{
+		align-items: flex-start;
+	}
+	.top-menu-item, .bottom-menu-item{
+		padding: 10px 0;
+	}
+	.bottom-menu-item a{
+		font-size: 14px;
+	}
+}

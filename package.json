@@ -1,0 +1,24 @@
+{
+  "name": "food",
+  "version": "1.0.0",
+  "description": "Food Application",
+  "main": "server.js",
+  "keywords": [
+    "food"
+  ],
+  "author": "Aadhar Jain <aadharjain1@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "sass": "^1.10.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-smushit": "^1.2.0",
+    "gulp-util": "^3.0.8"
+  }
+}
